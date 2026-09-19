@@ -122,13 +122,12 @@
       overflow: hidden;
     }
 
-    /* Target frame setup for the live task window array */
-    #cpalead-wall-container {
+    iframe {
       width: 100%;
       height: 710px;
       border: none;
       border-radius: 8px;
-      background: transparent;
+      background: #0b0e11;
     }
 
     footer {
@@ -161,6 +160,9 @@
         padding: 8px;
         min-height: 700px;
       }
+      iframe {
+        height: 670px;
+      }
     }
   </style>
 </head>
@@ -182,9 +184,9 @@
       </p>
     </section>
 
-    <!-- STABLE APP WRAPPER: ANCHORS THE DYNAMIC INTERACTION INJECTIONS -->
+    <!-- FIXED IMMUTABLE IFRAME ENGINE: INTEGRATES DIRECT CLOUD LINKS WITH ZERO SCRIPT BLOCKS -->
     <section class="offerwall-space">
-      <div id="cpalead-wall-container"></div>
+      <iframe referrerpolicy="no-referrer" sandbox="allow-popups allow-same-origin allow-scripts allow-forms allow-top-navigation-by-user-activation allow-popups-to-escape-sandbox" src="https://qckclk.com" frameborder="0"></iframe>
     </section>
   </main>
 
@@ -193,45 +195,6 @@
       <strong>SECURITY POLICY:</strong> VPN, proxy servers, or automated bots are strictly prohibited on this platform. Users attempting to manipulate location metrics face immediate IP bans and balance forfeitures.
     </p>
   </footer>
-
-  <!-- DYNAMIC PLATFORM RUNTIME: BYPASSES STATIC SERVER SANDBOX REDIRECTS -->
-  <script type="text/javascript">
-    (function(w, d) {
-      var runtimeUrl = "https://qckclk.com";
-      var config = {"iframeSrc": "https://qckclk.com", "targetEl": "#cpalead-wall-container"};
-      var started = false;
-
-      function start() {
-        if (started || !w.CPAleadOfferwallV2 || typeof w.CPAleadOfferwallV2.bootEmbed !== 'function') {
-          return false;
-        }
-        w.CPAleadOfferwallV2.bootEmbed(config);
-        started = true;
-        return true;
-      }
-
-      function onReady() {
-        if (start()) {
-          w.removeEventListener('cpalead:offerwall-v2-runtime-ready', onReady);
-        }
-      }
-
-      if (!d.querySelector('script[data-cpld-offerwall-v2-runtime]')) {
-        var script = d.createElement('script');
-        script.src = runtimeUrl;
-        script.async = true;
-        script.dataset.cpldOfferwallV2Runtime = '1';
-        (d.head || d.documentElement).appendChild(script);
-      }
-
-      if (!start()) {
-        w.addEventListener('cpalead:offerwall-v2-runtime-ready', onReady);
-        setTimeout(onReady, 0);
-        setTimeout(onReady, 100);
-        setTimeout(onReady, 500);
-      }
-    })(window, document);
-  </script>
 
 </body>
 </html>
